@@ -1,30 +1,32 @@
-public class Main {
+public class Main{
     public static void main(String[] args) {
-        String bulletIt=" Print a Bulleted List:\n"+
-                "\t\u2022 First Point\n"+
-                "\t\u2022 Sub Point";
+        String bulletIt = "Print a bulleted list:\n"+
+                "\t\u2022 First point\n"+
+                "\t\t\u2022 Second point";
         System.out.println(bulletIt);
-        String textBlock= """
-                Print a Bulleted List:
-                            \u2022 First Point
-                                \u2022 Sub Point""";
 
+        String textBlock = """
+                Print a bulleted List:
+                        \u2022 First Point
+                            \u2022 Sub Point""";
         System.out.println(textBlock);
 
-        int age =22;
-        System.out.printf("Your age is %d%n",age);
+        int age = 35;
+        System.out.printf("Your age is %d%n", age);
 
-        int yearOfBirth=2022-age;
-        System.out.printf("Age =%.2f, Birth year = %d\n",(float)age,yearOfBirth);
+        int yearOfBirth = 2025-age;
+        System.out.printf("Age = %d, Birth year = %d%n",age,yearOfBirth);
 
-        for(int i=1;i<=100000;i*=10) {
-            System.out.printf("Printing %6d %n",i);
+        System.out.printf("Your age is %.2f%n", (float)age);
+
+        for(int i = 1; i <=100000; i *= 10) {
+            System.out.printf("Printing %6d%n",i);
         }
 
-        String formattedString =String.format("Your age is %d",age);
+        String formattedString = String.format("Your age is %d",age);
         System.out.println(formattedString);
 
-        formattedString="Your age is %d".formatted(age);
+        formattedString = "Your age is %d".formatted(age);
         System.out.println(formattedString);
     }
 }
